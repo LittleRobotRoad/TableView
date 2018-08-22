@@ -125,7 +125,7 @@ public abstract class AbstractRecyclerViewAdapter<T> extends RecyclerView
     }
 
     public void changeItemRange(int positionStart, List<T> items) {
-        if (mItemList.size() > positionStart + items.size() && items != null) {
+        if (mItemList.size() >= positionStart + items.size() && items != null) {
             for (int i = 0; i < items.size(); i++) {
                 if (i != RecyclerView.NO_POSITION) {
                     mItemList.set(i + positionStart, items.get(i));
